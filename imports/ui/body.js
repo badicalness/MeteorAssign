@@ -43,6 +43,9 @@ Template.body.events({
       username: Meteor.user().username,
     });
  
+    // Insert a task into the collection
+    Meteor.call('tasks.insert', text);
+ 
         // Clear form
     target.text.value = '';
   },
